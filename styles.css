@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(352deg, rgba(226,11,102,1) 0%, rgba(121,9,115,1) 35%, rgba(126,62,147,1) 52%, rgba(255,0,215,1) 100%);
+    font-family: Cookie,'Times New Roman', Times, serif;
+    font-size: 2rem;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+.title{
+    font-size: 6rem;
+    color: blueviolet;
+    text-shadow: 2px 2px black;
+}
+
+.post {
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.imgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid violet;
+    border-radius: 10px;
+    
+}
+
+img {
+    width: 700px;
+    cursor: pointer;
+    user-select: none;
+    
+}
+
+.showLove {
+    position: absolute;
+    opacity: 0;
+    display: inline-block;
+    width: 228px;
+}
+
+
+.love {
+    animation: 1s like-heart-animation ease-in-out forwards;
+}
+
+.counterContainer{
+    display:inline-flex;
+    gap: 1.5rem;
+}
+
+.counter{
+    font-size: 3rem;
+}
+
+.counterLabel {
+    font-size: 3rem;
+    color: rgb(207, 52, 52);
+    text-shadow: 2px 2px black;
+}
+
+.counterLabelAnimation{
+    font-size: 3rem;
+    animation: 1s fontAnimation ease-in-out;
+    color: rgb(207, 52, 52);
+    text-shadow: 2px 2px black;
+}
+
+@keyframes fontAnimation{
+    0%{
+        transform: scale(1);
+    }
+    25%{
+        transform: scale(3);
+    }
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+@keyframes like-heart-animation {
+
+    0%,
+    to {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    15% {
+        opacity: 0.9;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    30% {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
+
+    45%,
+    80% {
+        opacity: 0.9;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}

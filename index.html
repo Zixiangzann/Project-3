@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Project 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arapey:ital@1&family=Philosopher&family=Cookie&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c0e4f731f7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+  <div class="post">
+    <div class ="title">Sweet Heart</div>
+    <div class="imgContainer">
+      <img class="showLove" src="/img/kiss.png">
+      <img src="/img/love.jpeg" />
+    </div>
+    <div class="counterContainer">
+    <span class="counter">0</span>
+    <p class="counterLabel">kiss</p>
+  </div>
+  </div>
+  
+</body>
+
+<script>
+  const imgContainer = document.querySelector(".imgContainer");
+  const showLove = document.querySelector(".showLove");
+  const countEl = document.querySelector(".counter");
+  const countLabel = document.querySelector(".counterLabel");
+  let count = 0;
+
+  imgContainer.addEventListener("dblclick", () => {
+    count++;
+    countEl.innerHTML = count;
+    showLove.classList.add('love');
+    countLabel.className = "counterLabelAnimation";
+    setTimeout(() => {
+    showLove.classList.remove('love');
+    countLabel.className = "counterLabel";
+  }, 1200);
+
+
+  });
+
+</script>
+
+</html>
